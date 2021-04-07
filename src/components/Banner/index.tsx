@@ -1,13 +1,8 @@
-import { Flex, Image, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 
 import { BannerContent } from "./BannerContent";
 
 export function Banner() {
-  // const isWideVersion = useBreakpointValue({
-  //   base: false,
-  //   lg: true
-  // })
-
   return (
     <Flex w="100%" h="335" pos="relative" justify="center">
       <Image src="/images/background.png" alt="Background" w="100%" />
