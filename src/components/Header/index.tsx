@@ -7,11 +7,10 @@ export function Header() {
       w="100%"
       maxWidth={1440}
       mx="auto"
-      h="20"
       align="center"
       justify="center"
     >
-      <Image src="/images/logo.svg" alt="Worldtrip" w="32" />
+      <Image src="/images/logo.svg" alt="Worldtrip" w="11.5rem" m="1.7rem 0" />
     </Flex>
   );
 }
