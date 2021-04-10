@@ -36,7 +36,7 @@ export function Banner({
             <Text
               fontWeight="600"
               color="white.600"
-              fontSize="2.25rem"
+              fontSize="3rem"
               ml="8.75rem"
             >
               {headerContinent}
