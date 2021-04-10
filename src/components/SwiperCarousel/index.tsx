@@ -8,7 +8,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 interface Continent {
   id: number;
-  image: string;
+  swiperImage?: string;
   name: string;
   description: string;
 }
@@ -33,7 +33,7 @@ export function SwiperCarousel({ continents }: SwiperCarouselProps) {
           <SwiperSlide tag="li" key={`slide-${continent.id}`}>
             <CarouselContent
               id={continent.id}
-              image={continent.image}
+              image={continent.swiperImage}
               name={continent.name}
               description={continent.description}
             />
