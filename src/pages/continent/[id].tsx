@@ -31,11 +31,11 @@ interface ContinentProps {
 
 export default function Continent() {
   const router = useRouter();
+
   const [continent, setContinent] = useState<ContinentProps | null>(null);
   const { continents } = database;
 
   const { id } = router.query;
-  console.log(id);
 
   useEffect(() => {
     const selectedContinent = continents.find(
@@ -46,34 +46,36 @@ export default function Continent() {
 
   return (
     <>
-      <Head>
-        <title>Worldtrip</title>
-      </Head>
+      {continent && (
+        <>
+          <Head>
+            <title>Worldtrip | {continent.name}</title>
+          </Head>
 
-      <Flex direction="column" align="center">
-        <Header />
-        {continent && (
-          <Banner
-            heightHeaderContinent="500"
-            src={continent.continentImage}
-            headerContinent={continent.name}
-          />
-        )}
-      </Flex>
+          <Flex direction="column" align="center">
+            <Header />
 
-      <Box m="80px 140px">
-        <Flex align="center">
-          <ContinentDescription
-            continentDescription={continent.continentDescription}
-          />
-          <ContinentDetails />
-        </Flex>
-        {/* <Flex direction="column" w="100%" mt="80px" mb="40px">
-          <Text fontWeight="500" fontSize="2.25rem">
-            Cidades +100
-          </Text>
-        </Flex> */}
-      </Box>
+            <Banner
+              heightHeaderContinent="500"
+              src={continent.continentImage}
+              headerContinent={continent.name}
+            />
+          </Flex>
+
+          <Box m="80px 140px">
+            <Flex align="center">
+              <ContinentDescription
+                continentDescription={continent.continentDescription}
+              />
+              <ContinentDetails
+                countries={continent.numberOfCountries}
+                languages={continent.numberOfLanguages}
+                cities={continent.numberOfCities}
+              />
+            </Flex>
+          </Box>
+        </>
+      )}
     </>
   );
 }
