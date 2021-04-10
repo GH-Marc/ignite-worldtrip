@@ -6,10 +6,10 @@ import { Header } from "../components/Header";
 import { SwiperCarousel } from "../components/SwiperCarousel";
 import { Travel } from "../components/Travel";
 
-import { swiperData } from "../../swiperData";
+import database from "../../database.json";
 
 export default function Home() {
-  const { continents } = swiperData;
+  const { continents } = database;
 
   return (
     <>
