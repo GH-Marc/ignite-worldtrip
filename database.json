@@ -1,0 +1,38 @@
+{
+  "continents": [
+    {
+      "id": 1,
+      "swiperImage":
+        "https://images.unsplash.com/photo-1576974482516-a9d60a9106b4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80",
+      "name": "Europa",
+      "description": "O continente mais antigo.",
+      "continentImage":
+        "https://images.unsplash.com/photo-1471960098958-2059c6681742?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1421&q=80",
+      "continentDescription": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+      "numberOfCountries": 50,
+      "numberOfLanguages": 60,
+      "numberOfCities": 24,
+      "countries": [
+        {
+          "id": 1,
+          "name": "Itália",
+          "capital": "Roma",
+          "image": "https://s5.static.brasilescola.uol.com.br/img/2019/05/veneza.jpg",
+          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197626.svg?token=exp=1618000553~hmac=ffea031d8f62a150a500270a71f332e4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "swiperImage": "/images/swiper-images/swiper-europe.png",
+      "name": "Europa",
+      "description": "O continente mais antigo."
+    },
+    {
+      "id": 3,
+      "swiperImage": "/images/swiper-images/swiper-europe.png",
+      "name": "Europa",
+      "description": "O continente mais antigo."
+    }
+  ]
+}
