@@ -20,7 +20,7 @@ export function BannerContent() {
     },
     lg: {
       margin: "0 0 0 110px",
-      width: "450",
+      width: "485",
     },
   });
 
