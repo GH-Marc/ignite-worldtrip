@@ -7,8 +7,8 @@ import { CarouselContent } from "./CarouselContent";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 interface Continent {
-  id: number;
-  swiperImage?: string;
+  slug: string;
+  swiperImage: string;
   name: string;
   description: string;
 }
@@ -30,9 +30,9 @@ export function SwiperCarousel({ continents }: SwiperCarouselProps) {
         autoplay={{ delay: 3000 }}
       >
         {continents.map((continent) => (
-          <SwiperSlide tag="li" key={`slide-${continent.id}`}>
+          <SwiperSlide tag="li" key={`slide-${continent.slug}`}>
             <CarouselContent
-              id={continent.id}
+              slug={continent.slug}
               image={continent.swiperImage}
               name={continent.name}
               description={continent.description}
