@@ -18,35 +18,35 @@
           "name": "Itália",
           "capital": "Roma",
           "image": "https://s5.static.brasilescola.uol.com.br/img/2019/05/veneza.jpg",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197626.svg?token=exp=1618000553~hmac=ffea031d8f62a150a500270a71f332e4"
+          "flag": "/images/flags/italy.svg"
         },
         {
           "id": 2,
           "name": "França",
           "capital": "Paris",
           "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1414&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197560.svg?token=exp=1618079940~hmac=fb5bd2d6d5d0fb61b4e8c4a0722fe49b"
+          "flag": "/images/flags/france.svg"
         },
         {
           "id": 3,
           "name": "Inglaterra",
           "capital": "Londres",
           "image": "https://images.unsplash.com/photo-1600454021970-351eff4a6554?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1498&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197485.svg?token=exp=1618080026~hmac=b8f2428326ba10b250103cd6e0f6bf7d"
+          "flag": "/images/flags/england.svg"
         },
         {
           "id": 4,
           "name": "Turquia",
           "capital": "Ancara",
           "image": "https://images.unsplash.com/photo-1516630294856-68665df1db49?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1410&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197518.svg?token=exp=1618080092~hmac=7a26268c807de4f306bc2ecb6601e9d8"
+          "flag": "/images/flags/turkey.svg"
         },
         {
           "id": 5,
           "name": "Noruega",
           "capital": "Oslo",
-          "image": "https://s5.static.brasilescola.uol.com.br/img/2019/05/veneza.jpg",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197579.svg?token=exp=1618080189~hmac=d175ca411db7902e35349e134bca3f23"
+          "image": "https://images.unsplash.com/photo-1551041061-2edc96ab9805?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80",
+          "flag": "/images/flags/norway.svg"
         }
       ]
     },
@@ -66,35 +66,35 @@
           "name": "Estados Unidos da América",
           "capital": "Washington",
           "image": "https://images.unsplash.com/photo-1501466044931-62695aada8e9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1578&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197484.svg?token=exp=1618080774~hmac=155a7fc7499dfd323dde3b7375ac14cb"
+          "flag": "/images/flags/eua.svg"
         },
         {
           "id": 2,
           "name": "Brasil",
           "capital": "Brasília",
           "image": "https://images.unsplash.com/photo-1594640708322-826272d4c672?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197386.svg?token=exp=1618081082~hmac=e1fe84348d7ee9ab94026276c4084fcb"
+          "flag": "/images/flags/brazil.svg"
         },
         {
           "id": 3,
           "name": "Chile",
           "capital": "Santiago",
           "image": "https://images.unsplash.com/photo-1560405456-2521742e68c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197586.svg?token=exp=1618081218~hmac=98b6772b6a591cc637893e22f2017324"
+          "flag": "/images/flags/chile.svg"
         },
         {
           "id": 4,
           "name": "Canadá",
           "capital": "Ottawa",
           "image": "https://images.unsplash.com/photo-1569681157442-5eabf7fe850e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197430.svg?token=exp=1618081362~hmac=28d243c7d7aad98f8bf18645b32ed9fa"
+          "flag": "/images/flags/canada.svg"
         },
         {
           "id": 5,
           "name": "Panamá",
           "capital": "Cidade do Panamá",
           "image": "https://images.unsplash.com/photo-1524544187526-2b2855b65f16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1402&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197590.svg?token=exp=1618081522~hmac=8dee9023e8db4061dadee332e62d68a1"
+          "flag": "/images/flags/panama.svg"
         }
       ]
     },
@@ -114,35 +114,35 @@
           "name": "China",
           "capital": "Pequim",
           "image": "https://images.unsplash.com/photo-1578673617560-099669458e91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197375.svg?token=exp=1618083055~hmac=5e18941206b29441fdd15ab8adb4bc92"
+          "flag": "/images/flags/china.svg"
         },
         {
           "id": 2,
           "name": "Japão",
           "capital": "Tóquio",
           "image": "https://images.unsplash.com/photo-1549693578-d683be217e58?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1512&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197604.svg?token=exp=1618083084~hmac=ee4b18ca34ff4dde3aec07686b9d6aef"
+          "flag": "/images/flags/japan.svg"
         },
         {
           "id": 3,
           "name": "Índia",
           "capital": "Nova Delhi",
           "image": "https://images.unsplash.com/photo-1555952238-7d76782b45f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197419.svg?token=exp=1618083356~hmac=bd46a2080d462e47ce0ef93f4ae29010"
+          "flag": "/images/flags/india.svg"
         },
         {
           "id": 4,
           "name": "Indonésia",
           "capital": "Jacarta",
           "image": "https://images.unsplash.com/photo-1538582709238-0a503bd5ae04?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197559.svg?token=exp=1618083500~hmac=3b43c688b4358cc097d142d8b89646af"
+          "flag": "/images/flags/indonesia.svg"
         },
         {
           "id": 5,
           "name": "Coreia do Sul",
           "capital": "Seul",
           "image": "https://images.unsplash.com/photo-1546874177-9e664107314e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197582.svg?token=exp=1618083522~hmac=e33564dbce13df3268307b66390fe1bc"
+          "flag": "/images/flags/south-korea.svg"
         }
       ]
     },
@@ -162,35 +162,35 @@
           "name": "África do Sul",
           "capital": "Cidade do Cabo, Bloemfontein, Pretória",
           "image": "https://images.unsplash.com/photo-1525945995886-0ede2bd49ab6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197562.svg?token=exp=1618084189~hmac=48ef7adf05eeffb2f905a1c4e502e272"
+          "flag": "/images/flags/south-africa.svg"
         },
         {
           "id": 2,
           "name": "Nigéria",
           "capital": "Abuja",
           "image": "https://images.unsplash.com/photo-1537372023620-37161b1ad8ac?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197627.svg?token=exp=1618084827~hmac=13c3848ae79d85e54be6b6c9e1a2f1c3"
+          "flag": "/images/flags/nigeria.svg"
         },
         {
           "id": 3,
           "name": "Angola",
           "capital": "Luanda",
           "image": "https://images.unsplash.com/photo-1536737216634-b77050ed3b2a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197513.svg?token=exp=1618084861~hmac=6aff3ccd9ba868a260cb514169b7f0de"
+          "flag": "/images/flags/angola.svg"
         },
         {
           "id": 4,
           "name": "Marrocos",
           "capital": "Rabat",
           "image": "https://images.unsplash.com/photo-1598022124758-26d09adcb7b6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197551.svg?token=exp=1618084885~hmac=b3ac844df76db030a51c932374f9e513"
+          "flag": "/images/flags/marrocos.svg"
         },
         {
           "id": 5,
           "name": "Moçambique",
           "capital": "Maputo",
           "image": "https://images.unsplash.com/photo-1526998758291-f87c4c1a8fff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1510&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197631.svg?token=exp=1618084903~hmac=d73df9125b5f00503f714376a2747667"
+          "flag": "/images/flags/moçambique.svg"
         }
       ]
     },
@@ -209,22 +209,22 @@
           "id": 1,
           "name": "Austrália",
           "capital": "Camberra",
-          "image": "https://images.unsplash.com/photo-1589330273594-fade1ee91647?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197507.svg?token=exp=1618094519~hmac=62729acf18a970b053c2628e2fdc40fe"
+          "image": "https://australiabrasil.com.br/files/2013/08/Canberra-IMG_2798-572-635x423.jpg",
+          "flag": "/images/flags/australia.svg"
         },
         {
           "id": 2,
           "name": "Nova Zelândia",
           "capital": "Welligton",
           "image": "https://images.unsplash.com/photo-1598213993464-40c4c6f4158b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197589.svg?token=exp=1618094659~hmac=49f560aaca95d56242879b398e97a55f"
+          "flag": "/images/flags/new-zealand.svg"
         },
         {
           "id": 3,
           "name": "Fiji",
           "capital": "Suva",
           "image": "https://images.unsplash.com/photo-1449347206122-792f0e389512?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1518&q=80",
-          "flag": "https://www.flaticon.com/svg/vstatic/svg/197/197492.svg?token=exp=1618094687~hmac=8e6c828767ccd010282ea050158c5961"
+          "flag": "/images/flags/fiji.svg"
         }
       ]
     },
