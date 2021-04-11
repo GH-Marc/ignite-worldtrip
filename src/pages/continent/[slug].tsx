@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Flex } from "@chakra-ui/layout";
+import { Box, Flex, Heading, SimpleGrid } from "@chakra-ui/layout";
 
 import { useRouter } from "next/router";
 
@@ -9,6 +9,7 @@ import { Header } from "../../components/Header";
 import { Banner } from "../../components/Banner";
 import { ContinentDescription } from "../../components/ContinentDescription";
 import { ContinentDetails } from "../../components/ContinentDetails";
+import { CountriesCard } from "../../components/CountriesCard";
 
 import database from "../../../database.json";
 
@@ -83,6 +84,35 @@ export default function Continent() {
                 hasTooltip={true}
               />
             </Flex>
+
+            {continent.slug !== "antardida" && (
+              <Box mt="5rem">
+                <Heading
+                  as="h1"
+                  fontWeight="500"
+                  fontSize={["2xl", "4xl"]}
+                  color="gray.600"
+                >
+                  Cidades +100
+                </Heading>
+
+                <SimpleGrid
+                  columns={[1, 4]}
+                  spacing={[5, 10]}
+                  my={["5", "45px"]}
+                >
+                  {continent.countries.map((country) => (
+                    <CountriesCard
+                      key={country.id}
+                      name={country.name}
+                      image={country.image}
+                      capital={country.capital}
+                      flag={country.flag}
+                    />
+                  ))}
+                </SimpleGrid>
+              </Box>
+            )}
           </Box>
         </>
       )}
