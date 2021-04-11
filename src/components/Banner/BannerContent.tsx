@@ -42,7 +42,7 @@ export function BannerContent() {
               lineHeight={["2.25rem", "2.625rem", "3rem", "3.375rem"]}
               fontSize={["1.5rem", "1.75rem", "2rem", "2.25rem"]}
             >
-              5 Continentes, <br /> infinitas possibilidades.
+              6 Continentes, <br /> infinitas possibilidades.
             </Heading>
 
             <Text
