@@ -1,5 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
 
+import { useRouter } from "next/router";
+
 interface ContinentInfosProps {
   continentDescription: string;
 }
@@ -7,11 +9,19 @@ interface ContinentInfosProps {
 export function ContinentDescription({
   continentDescription,
 }: ContinentInfosProps) {
+  const { asPath } = useRouter();
+
   return (
     <Flex>
-      <Text fontSize="1.5rem" align="justify" maxW="600px" maxH="211px">
-        {continentDescription}
-      </Text>
+      {asPath === "/continent/antardida" ? (
+        <Text fontSize="1.5rem" align="justify">
+          {continentDescription}
+        </Text>
+      ) : (
+        <Text fontSize="1.5rem" align="justify" maxW="600px">
+          {continentDescription}
+        </Text>
+      )}
     </Flex>
   );
 }
