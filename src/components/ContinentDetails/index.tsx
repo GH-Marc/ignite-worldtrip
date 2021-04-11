@@ -1,60 +1,39 @@
 import { Text, Flex, Heading, Image, Tooltip } from "@chakra-ui/react";
 
 interface ContinentDetailsProps {
-  countries: number;
-  languages: number;
-  cities: number;
+  amountDetail: number;
+  legend: string;
+  hasTooltip?: boolean;
 }
 
 export function ContinentDetails({
-  countries,
-  languages,
-  cities,
+  amountDetail,
+  legend,
+  hasTooltip = false,
 }: ContinentDetailsProps) {
   return (
-    <Flex w="100%" maxW="490px" justify="space-between" ml="70px">
-      <Flex direction="column" align="center">
-        <Heading
-          fontWeight="600"
-          fontSize="3rem"
-          color="yellow.900"
-          lineHeight="9"
-        >
-          {countries}
-        </Heading>
-        <Text fontWeight="600" fontSize="1.5rem">
-          países
-        </Text>
-      </Flex>
-      <Flex direction="column" align="center">
-        <Heading
-          fontWeight="600"
-          fontSize="3rem"
-          color="yellow.900"
-          lineHeight="9"
-        >
-          {languages}
-        </Heading>
-        <Text fontWeight="600" fontSize="1.5rem">
-          línguas
-        </Text>
-      </Flex>
-      <Flex direction="column" align="center">
-        <Heading
-          fontWeight="600"
-          fontSize="3rem"
-          color="yellow.900"
-          lineHeight="9"
-        >
-          {cities}
-        </Heading>
+    <Flex
+      direction="column"
+      align={["flex-start", "center"]}
+      pl={["0", "70px"]}
+    >
+      <Heading
+        fontWeight="600"
+        fontSize="3rem"
+        color="yellow.900"
+        lineHeight="9"
+      >
+        {amountDetail}
+      </Heading>
+      {hasTooltip ? (
         <Flex align="center">
           <Text fontWeight="600" fontSize="1.5rem">
-            cidades +100
+            {legend}
           </Text>
+
           <Tooltip
             label="Em amarelo são as mais visitadas"
-            aria-label="A tooltip"
+            aria-label="Tooltip"
             bg="light.800"
             borderRadius="4px"
           >
@@ -67,7 +46,11 @@ export function ContinentDetails({
             />
           </Tooltip>
         </Flex>
-      </Flex>
+      ) : (
+        <Text fontWeight="600" fontSize="1.5rem">
+          {legend}
+        </Text>
+      )}
     </Flex>
   );
 }
