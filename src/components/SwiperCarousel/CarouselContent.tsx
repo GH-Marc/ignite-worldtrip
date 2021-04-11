@@ -2,20 +2,20 @@ import { Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface CarouselContentProps {
-  id: number;
+  slug: string;
   image: string;
   name: string;
   description: string;
 }
 
 export function CarouselContent({
-  id,
+  slug,
   image,
   name,
   description,
 }: CarouselContentProps) {
   return (
-    <Link href={`continent/${id}`}>
+    <Link href={`continent/${slug}`}>
       <Flex
         backgroundImage={`url(${image})`}
         backgroundRepeat="no-repeat"
