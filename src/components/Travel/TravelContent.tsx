@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Image, Text, useBreakpointValue } from "@chakra-ui/react";
 
 interface TravelContentProps {
   src: string;
@@ -6,19 +6,21 @@ interface TravelContentProps {
 }
 
 export function TravelContent({ type, src }: TravelContentProps) {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
   return (
-    <>
-      <Flex direction="column" align="center">
-        <Image src={src} alt={type} w="5.3rem" h="5.3rem" m="0 auto" />
-        <Text
-          textAlign="center"
-          fontSize="1.25rem"
-          fontWeight="600"
-          mt="1.5rem"
-        >
-          {type}
-        </Text>
-      </Flex>
-    </>
+    <Flex direction={["row", "column"]} align="center" justify="center">
+      {isWideVersion ? (
+        <Image src={src} alt={type} w="5.3rem" h="5.3rem" mb="6" />
+      ) : (
+        <Image src="/images/ellipse.svg" alt="ellipse" mr="2" />
+      )}
+      <Text fontSize={["md", "xl", "2xl"]} fontWeight="600">
+        {type}
+      </Text>
+    </Flex>
   );
 }
