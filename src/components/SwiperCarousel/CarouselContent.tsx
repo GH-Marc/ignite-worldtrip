@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface CarouselContentProps {
@@ -15,25 +15,37 @@ export function CarouselContent({
   description,
 }: CarouselContentProps) {
   return (
-    <Link href={`continent/${slug}`}>
-      <Flex
-        backgroundImage={`url(${image})`}
-        backgroundRepeat="no-repeat"
-        backgroundPosition="center"
-        backgroundSize="cover"
-        w="100%"
-        cursor="pointer"
-        h={["250px", "450px"]}
-      >
-        <Flex justify="center" align="center" direction="column" w="100%">
-          <Text fontSize="3rem" fontWeight="700" color="white.600">
+    <Flex
+      backgroundImage={`url(${image})`}
+      backgroundRepeat="no-repeat"
+      backgroundPosition="100% 30%"
+      backgroundSize="cover"
+      w="100%"
+      h="100%"
+      align="center"
+      justify="center"
+      direction="column"
+      textAlign="center"
+    >
+      <Link href={`continent/${slug}`}>
+        <a>
+          <Heading
+            fontSize={["3xl", "4xl", "5xl"]}
+            fontWeight="700"
+            color="white.600"
+          >
             {name}
-          </Text>
-          <Text fontSize="1.5rem" fontWeight="700" color="gray.300">
+          </Heading>
+          <Text
+            fontSize={["0.8rem", "1xl", "2xl"]}
+            mt={["2", "4"]}
+            fontWeight="700"
+            color="gray.300"
+          >
             {description}
           </Text>
-        </Flex>
-      </Flex>
-    </Link>
+        </a>
+      </Link>
+    </Flex>
   );
 }
