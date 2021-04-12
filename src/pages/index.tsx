@@ -12,33 +12,32 @@ export default function Home() {
   const { continents } = database;
 
   return (
-    <>
+    <Flex direction="column">
       <Head>
         <title>Worldtrip</title>
       </Head>
 
-      <Flex direction="column" w="100%" align="center">
-        <Header />
-        <Banner />
-        <Travel />
+      <Header />
+      <Banner />
+      <Travel />
 
-        <Divider
-          variant="solid"
-          border="2px"
-          borderColor="light.800"
-          w="5.625rem"
-        />
-        <Heading
-          fontWeight="500"
-          fontSize="2.25rem"
-          w="52.4rem"
-          textAlign="center"
-          m="3.25rem 18.75rem"
-        >
-          Vamos nessa? <br /> Então escolha seu continente
-        </Heading>
-        <SwiperCarousel continents={continents} />
-      </Flex>
-    </>
+      <Divider
+        variant="solid"
+        border="1px"
+        borderColor="light.800"
+        w={["60px", "90px"]}
+        mx="auto"
+        my={["9", "20"]}
+      />
+      <Heading
+        fontSize={["lg", "3xl", "4xl"]}
+        fontWeight="500"
+        mb={["5", "14"]}
+        textAlign="center"
+      >
+        Vamos nessa? <br /> Então escolha seu continente
+      </Heading>
+      <SwiperCarousel continents={continents} />
+    </Flex>
   );
 }
