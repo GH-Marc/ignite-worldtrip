@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import { TravelContent } from "./TravelContent";
 
 const travelContent = [
@@ -6,19 +6,29 @@ const travelContent = [
   { src: "/images/surf.svg", type: "praia" },
   { src: "/images/building.svg", type: "moderno" },
   { src: "/images/museum.svg", type: "clássico" },
-  { src: "/images/earth.svg", type: "e mais..." },
 ];
 
 export function Travel() {
   return (
-    <>
-      <Flex maxW="1160px" w="100%" my="5rem" align="center">
-        {travelContent.map((content, i) => (
-          <Box justify="space-between" w="100%" m="0 1rem" key={i}>
-            <TravelContent src={content.src} type={content.type} />
-          </Box>
-        ))}
-      </Flex>
-    </>
+    <Grid
+      templateColumns={["1fr 1fr", "1fr 1fr", "1fr 1fr", "repeat(5, 1fr)"]}
+      gap={[1, 5]}
+      w="100%"
+      maxW="1160px"
+      mt={["10", "32"]}
+      mx="auto"
+      flexWrap="wrap"
+      align="center"
+      justify="space-between"
+    >
+      {travelContent.map((content, i) => (
+        <GridItem key={i}>
+          <TravelContent src={content.src} type={content.type} />
+        </GridItem>
+      ))}
+      <GridItem colSpan={[2, 2, 2, 1]}>
+        <TravelContent src="/images/earth.svg" type="e mais..." />
+      </GridItem>
+    </Grid>
   );
 }
