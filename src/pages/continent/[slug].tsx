@@ -1,121 +1,78 @@
-import { useEffect, useState } from "react";
-import { Box, Flex, Heading, SimpleGrid } from "@chakra-ui/layout";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { Flex } from "@chakra-ui/layout";
+import Head from "next/head";
 
 import { useRouter } from "next/router";
 
-import Head from "next/head";
-
 import { Header } from "../../components/Header";
-import { Banner } from "../../components/Banner";
+import { ContinentBanner } from "../../components/ContinentBanner";
 import { ContinentDescription } from "../../components/ContinentDescription";
-import { ContinentDetails } from "../../components/ContinentDetails";
 import { CountriesCard } from "../../components/CountriesCard";
 
-import database from "../../../database.json";
+import { api } from "../../services/api";
 
-export interface Country {
-  id: number;
-  name: string;
-  capital: string;
-  image: string;
-  flag: string;
+export interface ContinentProps {
+  continent: {
+    slug: string;
+    name: string;
+    continentDescription: string;
+    numberOfCountries: number;
+    numberOfLanguages: number;
+    numberOfCities: number;
+    continentImage: string;
+    countries: {
+      name: string;
+      capital: string;
+      image: string;
+      flag: string;
+    }[];
+  };
 }
 
-interface ContinentProps {
-  slug?: string;
-  name: string;
-  continentDescription?: string;
-  numberOfCountries?: number;
-  numberOfLanguages?: number;
-  numberOfCities?: number;
-  continentImage?: string;
-  countries?: Country[];
-}
-
-export default function Continent() {
+export default function Continent({ continent }: ContinentProps) {
   const router = useRouter();
 
-  const [continent, setContinent] = useState<ContinentProps | null>(null);
-  const { continents } = database;
-
-  const { slug } = router.query;
-
-  useEffect(() => {
-    const selectedContinent = continents.find(
-      (continent) => continent.slug === slug
-    );
-    setContinent(selectedContinent);
-  }, [slug]);
+  if (router.isFallback) {
+    return <h1>Carregando...</h1>;
+  }
 
   return (
-    <>
-      {continent && (
-        <>
-          <Head>
-            <title>Worldtrip | {continent.name}</title>
-          </Head>
+    <Flex direction="column">
+      <Head>
+        <title>Worldtrip | {continent.name}</title>
+      </Head>
 
-          <Flex direction="column" align="center">
-            <Header />
+      <Header />
+      <ContinentBanner
+        continentImage={continent.continentImage}
+        name={continent.name}
+      />
 
-            <Banner
-              heightHeaderContinent="500"
-              src={continent.continentImage}
-              headerContinent={continent.name}
-            />
-          </Flex>
-
-          <Box m="80px 140px">
-            <Flex align="center">
-              <ContinentDescription
-                continentDescription={continent.continentDescription}
-              />
-              <ContinentDetails
-                legend="países"
-                amountDetail={continent.numberOfCountries}
-              />
-              <ContinentDetails
-                legend="línguas"
-                amountDetail={continent.numberOfLanguages}
-              />
-              <ContinentDetails
-                legend="cidades +100"
-                amountDetail={continent.numberOfCities}
-                hasTooltip={true}
-              />
-            </Flex>
-
-            {continent.slug !== "antardida" && (
-              <Box mt="5rem">
-                <Heading
-                  as="h1"
-                  fontWeight="500"
-                  fontSize={["2xl", "4xl"]}
-                  color="gray.600"
-                >
-                  Cidades +100
-                </Heading>
-
-                <SimpleGrid
-                  columns={[1, 4]}
-                  spacing={[5, 10]}
-                  my={["5", "45px"]}
-                >
-                  {continent.countries.map((country) => (
-                    <CountriesCard
-                      key={country.id}
-                      name={country.name}
-                      image={country.image}
-                      capital={country.capital}
-                      flag={country.flag}
-                    />
-                  ))}
-                </SimpleGrid>
-              </Box>
-            )}
-          </Box>
-        </>
-      )}
-    </>
+      <Flex direction="column" maxW={1160} mx="auto" mb="10" px="1rem">
+        <ContinentDescription continent={continent} />
+        <CountriesCard continent={continent} />
+      </Flex>
+    </Flex>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { slug } = params;
+
+  const response = await api.get(`continents?${slug}`);
+
+  const continent = response.data;
+
+  return {
+    props: {
+      continent,
+    },
+  };
+};
