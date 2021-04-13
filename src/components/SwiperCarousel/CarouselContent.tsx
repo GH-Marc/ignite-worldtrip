@@ -2,14 +2,14 @@ import { Flex, Heading, Text, Link as ChakraLink } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface CarouselContentProps {
-  slug: string;
+  id: number;
   image: string;
   name: string;
   description: string;
 }
 
 export function CarouselContent({
-  slug,
+  id,
   image,
   name,
   description,
@@ -27,7 +27,7 @@ export function CarouselContent({
       direction="column"
       textAlign="center"
     >
-      <Link href={`continent/${slug}`}>
+      <Link href={`continent/${id}`}>
         <ChakraLink _hover={{}}>
           <Heading
             fontSize={["3xl", "4xl", "5xl"]}

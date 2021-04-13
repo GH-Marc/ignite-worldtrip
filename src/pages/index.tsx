@@ -11,7 +11,7 @@ import { api } from "../services/api";
 
 interface HomeProps {
   continents: {
-    slug: string;
+    id: number;
     name: string;
     description: string;
     swiperImage: string;

@@ -14,7 +14,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 interface SwiperCarouselProps {
   continents: {
-    slug: string;
+    id: number;
     swiperImage: string;
     name: string;
     description: string;
@@ -39,9 +39,9 @@ export function SwiperCarousel({ continents }: SwiperCarouselProps) {
         style={{ width: "100%", flex: "1" }}
       >
         {continents.map((continent) => (
-          <SwiperSlide key={continent.slug}>
+          <SwiperSlide key={continent.id}>
             <CarouselContent
-              slug={continent.slug}
+              id={continent.id}
               image={continent.swiperImage}
               name={continent.name}
               description={continent.description}
