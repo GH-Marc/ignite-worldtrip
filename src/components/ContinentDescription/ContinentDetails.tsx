@@ -4,16 +4,14 @@ import { useRouter } from "next/router";
 
 import { RiInformationLine } from "react-icons/ri";
 
-import { ContinentProps } from "../../pages/continent/[slug]";
+import { ContinentProps } from "../../pages/continent/[id]";
 
 export function ContinentDetails({ continent }: ContinentProps) {
   const { asPath } = useRouter();
 
   return (
     <>
-      {asPath === "/continent/antardida" ? (
-        ""
-      ) : (
+      {asPath !== "/continent/6" && (
         <Flex align="center" justify="space-between">
           <Flex
             direction="column"
