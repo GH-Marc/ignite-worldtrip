@@ -1,5 +1,7 @@
-import { Flex, Box, Image } from "@chakra-ui/react";
+import { Center, Image, Icon, Link as ChakraLink } from "@chakra-ui/react";
 import Link from "next/link";
+
+import { RiArrowLeftSLine } from "react-icons/ri";
 
 import { useRouter } from "next/router";
 
@@ -7,28 +9,27 @@ export function Header() {
   const { asPath } = useRouter();
 
   return (
-    <Link href="/">
-      <Flex
-        as="header"
-        w="100%"
-        maxWidth={1440}
-        mx="auto"
-        align="center"
-        justify="center"
-        position="relative"
-      >
-        {asPath !== "/" && (
-          <Box position="absolute" left="8.75rem">
-            <Image src="/images/arrowLeft.svg" cursor="pointer" />
-          </Box>
-        )}
-        <Image
-          src="/images/logo.svg"
-          alt="Worldtrip"
-          w="11.5rem"
-          m="1.7rem 0"
-        />
-      </Flex>
-    </Link>
+    <Center
+      as="header"
+      h={["50px", "100px"]}
+      w="100%"
+      maxWidth={1160}
+      mx="auto"
+      px="1rem"
+      position="relative"
+    >
+      {asPath !== "/" && (
+        <Link href="/">
+          <ChakraLink position="absolute" left={["16px", "40px"]}>
+            <Icon
+              as={RiArrowLeftSLine}
+              fontSize={[20, 40]}
+              justifySelf="start"
+            />
+          </ChakraLink>
+        </Link>
+      )}
+      <Image src="/images/logo.svg" alt="Worldtrip" w={["81px", "184px"]} />
+    </Center>
   );
 }
