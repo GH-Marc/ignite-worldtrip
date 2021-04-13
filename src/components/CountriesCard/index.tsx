@@ -1,50 +1,30 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Grid, Heading } from "@chakra-ui/react";
 
-interface CountriesCardProps {
-  name: string;
-  capital: string;
-  image: string;
-  flag: string;
-}
+import { Country } from "./Country";
 
-export function CountriesCard({
-  name,
-  capital,
-  image,
-  flag,
-}: CountriesCardProps) {
+import { ContinentProps } from "../../pages/continent/[slug]";
+
+export function CountriesCard({ continent }: ContinentProps) {
   return (
-    <Box w="256px" mx={["auto", "0"]}>
-      <Image
-        borderTopRadius="4"
-        src={image}
-        alt={name}
-        w="100%"
-        h="173"
-        objectFit="cover"
-      />
-      <Flex
-        justify="space-between"
-        align="center"
-        p={6}
-        border="1px"
-        borderColor="yellow.200"
-        borderTop="0"
-        borderBottomRadius="4"
+    <>
+      <Heading fontWeight="500" fontSize={["2xl", "4xl"]} mb="10">
+        Cidades +100
+      </Heading>
+      <Grid
+        templateColumns={["1fr", "1fr 1fr", "repeat(3, 1fr)", "repeat(4, 1fr)"]}
+        gap={["20px", "45px"]}
+        px={["30px", "0"]}
       >
-        <Flex direction="column">
-          <Heading as="h3" fontSize="xl" fontWeight="600" mb={3}>
-            {capital}
-          </Heading>
-          <Text color="gray.500" fontSize="md" fontWeight="500">
-            {name}
-          </Text>
-        </Flex>
-
-        <Flex align="center" justify="center">
-          <Image src={flag} w="30px" h="30px" />
-        </Flex>
-      </Flex>
-    </Box>
+        {continent.countries.map((country) => (
+          <Country
+            key={country.name}
+            name={country.name}
+            capital={country.capital}
+            image={country.image}
+            flag={country.flag}
+          />
+        ))}
+      </Grid>
+    </>
   );
 }
